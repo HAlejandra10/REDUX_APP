@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from "react-redux"
 
 const Home = () => {
+    const users = useSelector((state) => state.users)
   return (
     <div className="container">
         <h2>REDUX APP WITH JSON SERVER</h2>
