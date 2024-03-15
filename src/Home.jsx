@@ -5,7 +5,7 @@ const Home = () => {
     const users = useSelector((state) => state.users)
     console.log(users)
 
-  return (
+  return ( 
     <div className="container">
         <h2>REDUX APP WITH JSON SERVER</h2>
         <button className='btn btn-success my-3'>Create +</button>
@@ -19,7 +19,17 @@ const Home = () => {
                 </tr>
             </thead>
             <tbody>
-                
+                {users.map((user, index) => (
+                    <tr key= {index}>
+                        <td>{user.id}</td>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td>
+                            <button></button>
+                        </td>
+
+                    </tr>
+                )) }
             </tbody>
         </table>
 
