@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { userList } from "./Data";
 
 const userSlice = createSlice({
-    name: "user", 
+    name: "users", 
     initialState: userList, 
     reducers: {
 

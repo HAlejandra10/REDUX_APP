@@ -3,11 +3,13 @@ import { useSelector } from "react-redux"
 
 const Home = () => {
     const users = useSelector((state) => state.users)
+    console.log(users)
+
   return (
     <div className="container">
         <h2>REDUX APP WITH JSON SERVER</h2>
         <button className='btn btn-success my-3'>Create +</button>
-        <table className="table">
+        <table className='table'>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -16,6 +18,9 @@ const Home = () => {
                     <th>Action</th>
                 </tr>
             </thead>
+            <tbody>
+                
+            </tbody>
         </table>
 
     </div>
