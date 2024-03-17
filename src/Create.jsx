@@ -31,7 +31,7 @@ const Create = () => {
           </div>
           <div>
             <label htmlFor="email">Email:</label>
-            <input type="email" className="form-control" id="email" placeholder='Emter Email' onChange={e => setEmail(e.target.value)} />
+            <input type="email" className="form-control" id="email" placeholder='Enter Email' onChange={e => setEmail(e.target.value)} />
           </div> <br />
           <button className="btn btn-info">Submit</button>
         </form>
