@@ -1,10 +1,11 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Home = () => {
     const users = useSelector((state) => state.users)
-    console.log(users)
+    //console.log(users)
+   
 
   return ( 
     <div className="container">
