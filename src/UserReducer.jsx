@@ -6,7 +6,8 @@ const userSlice = createSlice({
     initialState: userList, 
     reducers: {
         addUser: (state, action) => {
-            console.log(action)
+           // console.log(action)
+           state.push(action, payload)
         }
     },
 })
