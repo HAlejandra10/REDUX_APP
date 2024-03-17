@@ -7,8 +7,8 @@ const Update = () => {
   const users = useSelector((state) => state.users);
   const existingUser = users.filter(f => f.id == id); 
   const {name, email} = existingUser[0];
-  const [uname, setUname] = useState(name)
-  const [unemail, seUnemail] = useState(email)
+  const [uname, setName] = useState(name)
+  const [uemail, setEmail] = useState(email)
  
 
   return (
@@ -18,11 +18,11 @@ const Update = () => {
         <form>
           <div>
             <label htmlFor="name">Name:</label>
-            <input type="text" className="form-control" id="name"  placeholder='Enter Name' value={uname} />
+            <input type="text" className="form-control" id="name"  placeholder='Enter Name' value={uname} onChange={e => setName(e.target.value) } />
           </div>
           <div>
             <label htmlFor="email">Email:</label>
-            <input type="email" className="form-control" id="email" placeholder='Enter Email'value={unemail} />
+            <input type="email" className="form-control" id="email" placeholder='Enter Email'value={uemail} onChange={e => setEmail(e.target.value) } />
           </div> <br />
           <button className="btn btn-info">Update</button>
         </form>
