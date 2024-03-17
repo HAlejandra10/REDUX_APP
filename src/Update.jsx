@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
+import { updateUser } from './UserReducer';
 
 const Update = () => {
   const {id} = useParams();
@@ -9,9 +10,15 @@ const Update = () => {
   const {name, email} = existingUser[0];
   const [uname, setName] = useState(name)
   const [uemail, setEmail] = useState(email)
+  const dispatch = useDispatch();
  
   const handleUpdate = (event) =>{
     event.preventDefault();
+    dispatch(updateUser({
+      id: id, 
+      name: uname,
+      email: uemail
+    }))
   }
 
   return (
