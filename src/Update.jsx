@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 
 const Update = () => {
   const {id} = useParams();
   const users = useSelector((state) => state.users);
-  const existingUser = users.filter(f => f.id === id); 
+  const existingUser = users.filter(f => f.id == id); 
   const {name, email} = existingUser[0];
+  const [uname, setUname] = useState(name)
+  const [unemail, seUnemail] = useState(email)
  
 
   return (
@@ -16,11 +18,11 @@ const Update = () => {
         <form>
           <div>
             <label htmlFor="name">Name:</label>
-            <input type="text" className="form-control" id="name"  placeholder='Enter Name' />
+            <input type="text" className="form-control" id="name"  placeholder='Enter Name' value={uname} />
           </div>
           <div>
             <label htmlFor="email">Email:</label>
-            <input type="email" className="form-control" id="email" placeholder='Enter Email' />
+            <input type="email" className="form-control" id="email" placeholder='Enter Email'value={unemail} />
           </div> <br />
           <button className="btn btn-info">Update</button>
         </form>
