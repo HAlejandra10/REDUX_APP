@@ -10,12 +10,15 @@ const Update = () => {
   const [uname, setName] = useState(name)
   const [uemail, setEmail] = useState(email)
  
+  const handleUpdate = (event) =>{
+    event.preventDefault();
+  }
 
   return (
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
       <div className="w-50 border bg-secondary text-white p-5">
         <h3>Update User</h3>
-        <form>
+        <form onSubmit={handleUpdate}>
           <div>
             <label htmlFor="name">Name:</label>
             <input type="text" className="form-control" id="name"  placeholder='Enter Name' value={uname} onChange={e => setName(e.target.value) } />
