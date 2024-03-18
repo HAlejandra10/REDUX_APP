@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { updateUser } from './UserReducer';
+import { useNavigate } from 'react-router-dom';
 
 const Update = () => {
   const {id} = useParams();
@@ -11,6 +12,7 @@ const Update = () => {
   const [uname, setName] = useState(name)
   const [uemail, setEmail] = useState(email)
   const dispatch = useDispatch();
+  const navigate = useNavigate()
  
   const handleUpdate = (event) =>{
     event.preventDefault();
@@ -19,6 +21,7 @@ const Update = () => {
       name: uname,
       email: uemail
     }))
+    navigate('/')
   }
 
   return (
