@@ -1,12 +1,13 @@
 export const userList= [
     {
-        name: "Heidy Primo", 
-        email: "heidy@email.com",
+       
+        name: "Camila Villarreal", 
+        email: "camila@email.com",
         id: 1
     },
     {
-        name: "Camila Villarreal", 
-        email: "camila@email.com",
+        name: "Heidy Primo", 
+        email: "heidy@email.com",
         id: 2
     },
     {
